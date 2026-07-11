@@ -168,8 +168,8 @@ const createTicketModalHandler = {
       if (result.success) {
         await interaction.editReply({
           embeds: [successEmbed(
-            'Ticket Created',
-            `Your ticket has been created in ${result.channel}!`
+            'Ticket créé avec succès',
+            `Le nom de votre ticket est : ${result.channel}!`
           )]
         });
       } else {
