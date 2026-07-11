@@ -283,9 +283,9 @@ export async function closeTicket(channel, closer, reason = 'No reason provided'
           try {
             const feedbackEmbed = createEmbed({
               title: '⭐ Comment s'est passée votre expérience avec notre support ?',
-              description: `We'd love to know how we did with **${channel.name}**.\nSelect a rating below — it only takes a second!`,
+              description: `Nous aimerions avoir votre retour sur votre experience avec **${channel.name}**.\nSelectionnez une note en dessous — ça prend seulement une seconde !`,
               color: '#F1C40F',
-              footer: { text: 'Your feedback helps us improve.' },
+              footer: { text: 'Votre retour nous aide à nous améliorer.' },
             });
 
             const base = `ticket_feedback:${channel.guild.id}:${channel.id}`;
@@ -299,11 +299,11 @@ export async function closeTicket(channel, closer, reason = 'No reason provided'
             const declineRow = new ActionRowBuilder().addComponents(
               new ButtonBuilder()
                 .setCustomId(`ticket_feedback_comment:${channel.guild.id}:${channel.id}`)
-                .setLabel('✍️ Add Comment')
+                .setLabel('✍️ Ajoutez un commentaire')
                 .setStyle(ButtonStyle.Secondary),
               new ButtonBuilder()
                 .setCustomId(`ticket_feedback_decline:${channel.guild.id}:${channel.id}`)
-                .setLabel('❌ No thanks')
+                .setLabel('❌ Non merci !')
                 .setStyle(ButtonStyle.Secondary),
             );
 
