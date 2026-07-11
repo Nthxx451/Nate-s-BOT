@@ -282,7 +282,7 @@ export async function closeTicket(channel, closer, reason = 'No reason provided'
 
           try {
             const feedbackEmbed = createEmbed({
-              title: '⭐ How was your support experience?',
+              title: '⭐ Comment s'est passée votre expérience avec notre support ?',
               description: `We'd love to know how we did with **${channel.name}**.\nSelect a rating below — it only takes a second!`,
               color: '#F1C40F',
               footer: { text: 'Your feedback helps us improve.' },
